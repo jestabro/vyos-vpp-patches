@@ -1,7 +1,7 @@
-From 7f7e085daadecf9256668179b4ec872e268c7ad1 Mon Sep 17 00:00:00 2001
+From 66bc59d1f53ccfa6b5d532938c5483421ae8a3d0 Mon Sep 17 00:00:00 2001
 From: zsdc <taras@vyos.io>
 Date: Tue, 23 Jul 2024 20:06:41 +0300
-Subject: [PATCH 2/3] linux-cp: Added routing for prefixes with no paths
+Subject: [PATCH 2/4] linux-cp: Added routing for prefixes with no paths
  available
 
 A new CLI and configuration file option is available:
@@ -180,5 +180,5 @@ index 0efd53e64..0879d00bc 100644
         (ip6_address_is_multicast (&pfx.fp_addr.ip6) ||
  	ip6_address_is_link_local_unicast (&pfx.fp_addr.ip6))))
 -- 
-2.39.5
+2.43.0
 

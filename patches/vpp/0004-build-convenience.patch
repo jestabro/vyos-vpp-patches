@@ -1,0 +1,33 @@
+From c573b143a3c3884cc80cd508631ae84de25eb040 Mon Sep 17 00:00:00 2001
+From: John Estabrook <jestabro@vyos.io>
+Date: Thu, 23 Jan 2025 20:02:54 -0600
+Subject: [PATCH 4/4] build convenience
+
+---
+ src/vpp/conf/80-vpp.conf | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/src/vpp/conf/80-vpp.conf b/src/vpp/conf/80-vpp.conf
+index 2207e2e38..15f284563 100644
+--- a/src/vpp/conf/80-vpp.conf
++++ b/src/vpp/conf/80-vpp.conf
+@@ -1,8 +1,8 @@
+ # Number of 2MB hugepages desired
+-vm.nr_hugepages=1024
++vm.nr_hugepages=4096
+ 
+ # Must be greater than or equal to (2 * vm.nr_hugepages).
+-vm.max_map_count=3096
++vm.max_map_count=2097152
+ 
+ # All groups allowed to access hugepages
+ vm.hugetlb_shm_group=0
+@@ -12,4 +12,4 @@ vm.hugetlb_shm_group=0
+ # If the existing kernel.shmmax setting  (cat /proc/sys/kernel/shmmax)
+ # is greater than the calculated TotalHugepageSize then set this parameter
+ # to current shmmax value.
+-kernel.shmmax=2147483648
++kernel.shmmax=17179869184
+-- 
+2.43.0
+
